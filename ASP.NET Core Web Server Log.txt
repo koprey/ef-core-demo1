@@ -1,0 +1,36 @@
+app1> info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+app1>       Executed DbCommand (39ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+app1>       SELECT TOP(1) [e].[BlogId], [e].[BlogName], [e].[CreateDate], [e].[Owner], [e].[Url]
+app1>       FROM [Blog] AS [e]
+app1>       WHERE [e].[BlogId] = @__get_Item_0
+app1> info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+app1>       Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?'], CommandType='Text', CommandTimeout='30']
+app1>       SELECT TOP(1) [e].[BlogId], [e].[BlogName], [e].[CreateDate], [e].[Owner], [e].[Url]
+app1>       FROM [Blog] AS [e]
+app1>       WHERE [e].[BlogId] = @__get_Item_0
+app1> info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+app1>       Executed DbCommand (34ms) [Parameters=[@p1='?', @p0='?'], CommandType='Text', CommandTimeout='30']
+app1>       SET NOCOUNT ON;
+app1>       UPDATE [Blog] SET [CreateDate] = @p0
+app1>       WHERE [BlogId] = @p1;
+app1>       SELECT @@ROWCOUNT;
+app1> info: Microsoft.AspNetCore.Mvc.RedirectToActionResult[1]
+app1>       Executing RedirectResult, redirecting to /.
+app1> info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+app1>       Executed action app1.Controllers.HomeController.Update (app1) in 237.6176ms
+app1> info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+app1>       Request finished in 252.629ms 302 
+app1> info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+app1>       Request starting HTTP/1.1 GET http://localhost:65175/  
+app1> info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+app1>       Executing action method app1.Controllers.HomeController.Index (app1) with arguments ((null)) - ModelState is Valid
+app1> info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+app1>       Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+app1>       SELECT [b].[BlogId], [b].[BlogName], [b].[CreateDate], [b].[Owner], [b].[Url]
+app1>       FROM [Blog] AS [b]
+app1> info: Microsoft.AspNetCore.Mvc.ViewFeatures.Internal.ViewResultExecutor[1]
+app1>       Executing ViewResult, running view at path /Views/Home/Index.cshtml.
+app1> info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+app1>       Executed action app1.Controllers.HomeController.Index (app1) in 8.0961ms
+app1> info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+app1>       Request finished in 9.5487ms 200 text/html; charset=utf-8
