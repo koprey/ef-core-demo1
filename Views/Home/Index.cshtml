@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<Blog>;
+
+<h2>App1</h2>
+
+<a asp-action="Update">Update</a>
+
+<table class="table table-condensed">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Blog Name</th>
+            <th>Url</th>
+            <th>Created</th>
+            <th>By</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.BlogId</td>
+                <td>@item.BlogName</td>
+                <td>@item.Url</td>
+                <td>@item.CreateDate?.ToShortDateString()</td>
+                <td>@item.Owner</td>
+            </tr>
+        }
+    </tbody>
+</table>
